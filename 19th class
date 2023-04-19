@@ -1,7 +1,102 @@
-n = int(input("Enter rows:"))
+n = int(input("Enter rows:"))    
 i=1
 j=1
 for i in range(1,n+1):
   for j in range(1,i+1):
     print(i,end="")
   print()
+ o/p:
+ 1
+ 22
+ 333
+ 4444
+ 55555
+
+#palindrome
+ n= int(input('Enter number:"))
+ rev=1
+ while(n!=0):
+  rem=n%10
+  rev=rev*10+rem
+  n=n/10
+ if(rev==n):
+  print("palindrome")
+ else:
+  print("not palindrome")
+ 
+ #armstrong
+ n=int(input("enter a no: "))
+sum=0
+rem=0
+t1=n
+temp=n
+c=0
+while(n!=0):
+    re=n%10
+    c=c+1
+    n=n//10
+while(temp!=0):
+    rem=temp%10
+    sum=sum+pow(rem,c)
+    temp = temp//10
+if(sum==t1):
+    print("armstrong")
+else:
+    print("not ")
+
+#Area of triangle,rectangle,square 
+print("triangle : ")
+l = int(input("enter length: "))
+h = int(input("Enter height: "))
+ta = 1/2*l*h
+print("Area  of triangle : ",ta)
+print("square : ")
+s= int(input("Enter side : "))
+sa=s*s
+print("Area of square : ",sa)
+print("rectangle : ")
+lr= int(input("enter length: "))
+b=int(input("Enter breadth : "))
+ra=lr*b
+print("Area of rectangle : ",ra)
+
+#swapping 3 numbers in ascending order
+a =int(input("Enter 1st no : "))
+b =int(input("Enter 2nd no : "))
+c =int(input("Enter 3rd no : "))
+p1=0
+p2=0
+p3=0
+if a>b and a>c:
+    p3=a
+elif b>c:
+    p3=b
+else:
+    p3=c
+if a<b and a<c:
+    p1=a
+elif b<c:
+    p1=b
+else:
+    p1=c
+p2 = p3-p1+1
+print(p1,p2,p3)
+
+#fibonacci
+n= int(input("Enter terms : "))
+a=0
+b=1
+i=2
+if n==0:
+    print('not possible')
+elif(n==1):
+    print(0)
+else:
+    print(a,b,end=" ")
+    while(i<n):
+        c=a+b
+        a=b
+        b=c
+        print(c,end=' ')
+        i+=1
+
